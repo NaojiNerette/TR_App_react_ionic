@@ -1,0 +1,7 @@
+{
+  "name": "miAppTrello",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
