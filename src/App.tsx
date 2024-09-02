@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import TrelloApp from './components/TrelloApp';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -20,7 +20,12 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
+// import '@ionic/react/css/palettes/dark.always.css';
+// import '@ionic/react/css/palettes/dark.class.css';
+// import '@ionic/react/css/palettes/dark.system.css';
+
 /* Theme variables */
+import '@ionic/react/css/core.css';
 import './theme/variables.css';
 
 setupIonicReact();
@@ -29,11 +34,9 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
+        <Route exact path="/trello" component={TrelloApp} />
         <Route exact path="/">
-          <Redirect to="/home" />
+          <Redirect to="/trello" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
